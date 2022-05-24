@@ -13,6 +13,39 @@ GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('computer_quizz')
 
 
+questions_level1 = [ {
+   "question": "1. What is programming?",
+   "options": [
+        "a) It's a robot"
+        "b) Solving problems using a computer"
+   ],
+    "correct_answer" 'b'
+    }
+     {
+   "question": "2. What is an algorithm? ",
+   "options": [
+        "a) It's a robot"
+        "b) A series of instructions"
+   ],
+    "correct_answer" 'b'
+    },
+     {
+   "question": "3. What does programming mean?",
+   "options": [
+        "a) To give instructions to a computer"
+        "b) Play difficult games on the computer"
+   ],
+    "correct_answer" 'a'
+    }
+     {
+   "question": "4. What does the abbreviation IT stand for?",
+   "options": [
+        "a) Indoor technology"
+        "b) Information technology"
+   ],
+    "correct_answer" 'b'
+     } ]
+
 def start_game():
     """
     Function defines start of game
@@ -39,3 +72,6 @@ else:
     print('~~~~~~~~~~~~~~~~~~~~~~')
     print('Okey, maybe next time.')
     print('~~~~~~~~~~~~~~~~~~~~~~')
+
+
+
