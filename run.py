@@ -15,20 +15,21 @@ SHEET = GSPREAD_CLIENT.open('computer_quizz')
 
 def welcome():
     """
-    Function defines start of game and gives choise of wich
-    level to play
+    Function defines start of game
     """
 
 
 print('Hi, welcome to my Computer Quizz!\n')
 
-
+question = input('Are you ready to play (yes or no): \n').lower()
 answer = input('Are you ready to play? yes or no:\n')
-name = input()
+user_name = input()
+SCORE = 0
+TOT_Q = 5
 
 
 if answer.lower() == 'yes':
     answer = input('Please enter your name: ')
-    print('Welcome', name, ',please choose level 1, 2 or 3:')
+    print('Welcome', user_name, ',please choose level 1, 2 or 3:')
 else:
-    print("Ok, mayby next time.")
+    print("Ok, maybe next time.")
