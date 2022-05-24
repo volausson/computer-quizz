@@ -22,17 +22,20 @@ def start_game():
 print('Hello, welcome to my Computer Quizz!\n')
 
 question = input('Are you ready to play (yes or no): \n')
+choice = input()
 score = 0
 total_question = 5
 
 
 if question.lower() == 'yes':
     question_str = input('Please enter your name: \n')
+    choice = input(f'Welcome,{question_str}! \n')
+    choice_str = input('Please choose level 1, 2 or 3 to play.\n')
     print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
-    print(f'Welcome, {question_str}! Please choose level 1, 2 or 3 to play.')
+    print(f'You chose level {choice_str}, good luck with your game!')
     print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
+
 else:
     print('~~~~~~~~~~~~~~~~~~~~~~')
     print('Okey, maybe next time.')
     print('~~~~~~~~~~~~~~~~~~~~~~')
-    
