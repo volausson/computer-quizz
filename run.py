@@ -13,40 +13,13 @@ GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('computer_quizz')
 
 
-questions_level1 = [ {
-   "question": "1. What is programming?",
-   "options": [
-        "a) It's a robot"
-        "b) Solving problems using a computer"
-   ],
-    "correct_answer" 'b'
-    }
-     {
-   "question": "2. What is an algorithm? ",
-   "options": [
-        "a) It's a robot"
-        "b) A series of instructions"
-   ],
-    "correct_answer" 'b'
-    },
-     {
-   "question": "3. What does programming mean?",
-   "options": [
-        "a) To give instructions to a computer"
-        "b) Play difficult games on the computer"
-   ],
-    "correct_answer" 'a'
-    }
-     {
-   "question": "4. What does the abbreviation IT stand for?",
-   "options": [
-        "a) Indoor technology"
-        "b) Information technology"
-   ],
-    "correct_answer" 'b'
-     } ]
-
 def start_game():
+    """
+    Function defines start of game
+    """
+
+
+#def start_game():
     """
     Function defines start of game
     """
@@ -56,22 +29,66 @@ print('Hello, welcome to my Computer Quizz!\n')
 
 question = input('Are you ready to play (yes or no): \n')
 choice = input()
-score = 0
-total_question = 5
-
+options = input() 
+total_questions = 5
+score = 0 
 
 if question.lower() == 'yes':
     question_str = input('Please enter your name: \n')
     choice = input(f'Welcome,{question_str}! \n')
-    choice_str = input('Please choose level 1, 2 or 3 to play.\n')
+    choice_str = input('Please choose level 1 to play.\n')
     print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
     print(f'You chose level {choice_str}, good luck with your game!')
     print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
+
+    question = input('1. What is programming?\n')
+    options = input("Is it 'a' a robot,\n"
+                    "or is it 'b', solving problems using a computer?\n")
+    
+    if options.lower() == 'b':
+        score += 1
+        print('well done, you got it right!')
+    else:
+        print('That was not the right answer, sorry.')
+
+    question = input('2. How many bits are there in a byte??\n')
+      
+    if question.lower() == '8':
+        score += 1
+        print('well done, you got it right!')
+    else:
+        print('That was not the right answer, sorry.')
+
+    question = input('3. What is the name given to a network designed to\n'
+                     'allow communication within an organization??\n')
+
+    if question.lower() == 'intranet':
+        score += 1
+        print('well done, you got it right!')
+    else:
+        print('That was not the right answer, sorry.')
+        
+    question = input('4. What does the abbreviation IT stand for?\n')
+    options = "a) Indoor technology"
+    "b) Information technology"
+    if options.lower() == 'b':
+        score += 1
+        print('well done, you got it right!')
+    else:
+        print('That was not the right answer, sorry.')
+        
+        question = input('5. In computing there are 8 bits to a byte,\n'
+                         'what are 4 bits called??\n')
+    
+    if question.lower() == 'a nibble':
+        score += 1
+        print('well done, you got it right!')
+    else:
+        print('That was not the right answer, sorry.')
+
 
 else:
     print('~~~~~~~~~~~~~~~~~~~~~~')
     print('Okey, maybe next time.')
     print('~~~~~~~~~~~~~~~~~~~~~~')
-
-
-
+    
