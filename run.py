@@ -13,29 +13,26 @@ GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('computer_quizz')
 
 
-level1 = SHEET.worksheet('level1')
-
-data = level1.get_all_values()
-
-print(data)
-
-# def welcome():
-"""
-Function defines start of game
-"""
+def start_game():
+    """
+    Function defines start of game
+    """
 
 
-# print('Hi, welcome to my Computer Quizz!\n')
+print('Hello, welcome to my Computer Quizz!\n')
 
-# question = input('Are you ready to play (yes or no): \n').lower()
-# answer = input('Are you ready to play? yes or no:\n')
-# user_name = input()
-# SCORE = 0
-# TOT_Q = 5
+question = input('Are you ready to play (yes or no): \n')
+score = 0
+total_question = 5
 
 
-# if answer.lower() == 'yes':
-#    answer = input('Please enter your name: ')
-#    print('Welcome', user_name, ',please choose level 1, 2 or 3:')
-# else:
-#    print("Ok, maybe next time.")
+if question.lower() == 'yes':
+    question_str = input('Please enter your name: \n')
+    print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
+    print(f'Welcome, {question_str}! Please choose level 1, 2 or 3 to play.')
+    print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
+else:
+    print('~~~~~~~~~~~~~~~~~~~~~~')
+    print('Okey, maybe next time.')
+    print('~~~~~~~~~~~~~~~~~~~~~~')
+    
