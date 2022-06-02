@@ -12,10 +12,10 @@ SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('computer_quizz')
 
-questions : [
+questions = [
     {
-        'question': 'What is programming?'
-        'options': [
+        "question": "What is programming?",
+        "options": [
             " a) It's a robot"
             " b) solving problems using a computer"
         ],
@@ -23,8 +23,8 @@ questions : [
     },
 
     {
-        'question': 'What does the abbreviation IT stand for?'
-        'options' [
+        'question': 'What does the abbreviation IT stand for?',
+        'options': [
            "a) Indoor technology"
            "b) Information technology"
         ],
@@ -33,8 +33,8 @@ questions : [
 
     {
         'question': 'In computing there are 8 bits to a byte, but what'
-        'are 4 bits called?'
-        'options' [
+        'are 4 bits called?',
+        'options': [
            "a) A nibble"
            "b) A nipple"
         ],
@@ -53,7 +53,7 @@ print('Hello, welcome to my Computer Quizz!\n')
 
 question = input('Are you ready to play (yes or no): \n')
 choice = input()
-OPTIONS = input()
+options = input()
 TOTAL_QUESTIONS = 5
 SCORE = 0
 
@@ -64,16 +64,6 @@ if question.lower() == 'yes':
     print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
     print(f'You chose level {choice_str}, good luck with your game!')
     print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
-
-    question = input('1. What is programming?\n')
-    options = input("Is it 'a' a robot,\n"
-                    "or is it 'b', solving problems using a computer?\n")
-
-    if options.lower() == 'b':
-        SCORE += 1
-        print('well done, you got it right!')
-    else:
-        print('That was not the right answer, sorry.')
 
     question = input('2. How many bits are there in a byte??\n')
 
@@ -96,15 +86,6 @@ if question.lower() == 'yes':
     OPTIONS = "a) Indoor technology"
     "b) Information technology"
     if options.lower() == 'b':
-        SCORE += 1
-        print('well done, you got it right!')
-    else:
-        print('That was not the right answer, sorry.')
-
-        question = input('5. In computing there are 8 bits to a byte,\n'
-                         'what are 4 bits called??\n')
-
-    if question.lower() == 'a nibble':
         SCORE += 1
         print('well done, you got it right!')
     else:
