@@ -23,10 +23,22 @@ questions = [
     },
 
     {
+        "question": "How many bits are there in a byte?",
+        "options": [
+            " a) 4"
+            " b) 16"
+            " c) 8"
+        ],
+        'answer': 'c'
+
+    },
+
+    {
         'question': 'What does the abbreviation IT stand for?',
         'options': [
            "a) Indoor technology"
            "b) Information technology"
+           "c) Invasive technologi"
         ],
         'answer': 'b'
     },
@@ -37,8 +49,21 @@ questions = [
         'options': [
            "a) A nibble"
            "b) A nipple"
+           "c) A nizzle"
         ],
         'answer': 'a'
+    },
+
+    {
+        'question': "What is the name given to a network designed to\n"
+                    "allow communication within an organization?",
+        'options': [
+             'a) Internet'
+             'b) Intranet'
+             'c) Ethernet'
+        ],
+        'answer': 'a'
+
     }
 ]
 
@@ -65,7 +90,7 @@ if question.lower() == 'yes':
     print(f'You chose level {choice_str}, good luck with your game!')
     print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
 
-    question = input('2. How many bits are there in a byte??\n')
+    question = input('?\n')
 
     if question.lower() == '8':
         SCORE += 1
