@@ -68,15 +68,23 @@ questions = [
 ]
 
 
-def start_game():
+def start_quizz():
     """
-    Function defines the start of start of the game.
+    Function defines the start of start of the quizz
     """
 
 
 print('Hello, welcome to my Computer Quizz!\n')
 
 question = input('Are you ready to play (yes or no): \n')
+
+
+def enter_quizz():
+    """
+    Function to engage user and give responsive feedback.
+    """
+
+
 choice = input()
 options = input()
 TOTAL_QUESTIONS = 5
@@ -89,23 +97,6 @@ if question.lower() == 'yes':
     print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
     print(f'You chose level {choice_str}, good luck with your game!')
     print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
-
-    question = input('?\n')
-
-    if question.lower() == '8':
-        SCORE += 1
-        print('well done, you got it right!')
-    else:
-        print('That was not the right answer, sorry.')
-
-    question = input('3. What is the name given to a network designed to\n'
-                     'allow communication within an organization??\n')
-
-    if question.lower() == 'intranet':
-        SCORE += 1
-        print('well done, you got it right!')
-    else:
-        print('That was not the right answer, sorry.')
 
     question = input('4. What does the abbreviation IT stand for?\n')
     OPTIONS = "a) Indoor technology"
