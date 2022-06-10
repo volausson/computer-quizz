@@ -11,14 +11,16 @@ questions = [
         ],
         'answer': 'b'
     },
-    {
-        'question': 'What does programming mean'
-    }
-    
-a) To give instructions to a computer
-b) Play difficult games on the computer
-right_answer:’a’
 
+    {
+        'question': 'What does programming mean',
+        "options": [
+          'a) To give instructions to a computer'
+          'b) Play difficult games on the computer'
+          'c) To build computers'
+        ],
+        'answer': 'a'
+    },
 
     {
         "question": "How many bits are there in a byte?",
@@ -62,26 +64,54 @@ right_answer:’a’
         ],
         'answer': 'a'
 
+    },
+    {
+        'question': 'What is an algorithm?',
+        'options': [
+             'a) A robot'
+             'b) A series of instructions'
+             'c) A mathematical problem'
+        ],
+        'answer': 'b'
+    },
+    {
+        'question': 'What sort of animal is Tux, the official mascot of the Linux operating system?',
+
+        'options': [
+            'a) A fox'
+            'b) A penguin'
+            'c) A parrot'
+        ],
+        'answer': 'b'
+    },
+    {
+        'question': "What was the name of the world's first programmer?",
+        'options': [
+            'a) Adam Lovelace'
+            'b) Ana Lovelace'
+            'c) Ada Lovelace'
+        ],
+        'answer': 'c'
+    },
+    {
+      'question': 'Who is considered the father of computers?',
+
+      'options': [
+        'a) Charles Gabbage'
+        'b) Charles Cabbage'
+        'c) Charles Babbage'
+      ],
+      'answer': 'c'
+    },
+    {
+      'question': 'Who is considered to be The Father of Artificial Intelligence?',
+      'options': [
+               'a) John McCarthy'
+               'b) John McArthur'
+               'c) James McCarthy'
+      ],
+      'answer': 'a'
     }
-
-    What is an algorithm?
-a) A robot
-b) A series of instructions
-	right_answer:’b’
-
-
-4.	What sort of animal is Tux, the official mascot of the Linux operating system?
-Penguin
-
-1.	What was the name of the world's first programmer?
-Ada Lovelace
-
-
-2.	Who is considered the father of computers?
-Charles Babbage
-
-3.	Who is considered to be The Father of Artificial Intelligence?
-John McCarthy
 
 ]
 
@@ -115,6 +145,7 @@ def enter_quizz():
 
 TOTAL_QUESTIONS = 5
 SCORE = 0
+
 player_name = input('Please enter your name \n')
 ('Otherwise I will just call you player): ').lower().strip()
 if player_name == '':
