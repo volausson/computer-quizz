@@ -57,13 +57,28 @@ questions = [
 
 def start_quizz():
     """
-    Function defines the start of start of the quizz
+    Function defines the start of quizz
     """
 
 
-print('Hello, welcome to my Computer Quizz!\n')
+    print('Hello, welcome to my Computer Quizz!\n')
+    ask = True
+    while ask:
+        question = input('Are you ready to play (yes or no):').lower().strip()
+        if question == 'yes':
+            print('ok')
+            enter_quizz()
+        if question =='':
+            print('Hey, you need to type either yes or no to play!')
+        if question == 'no':
+             print('~~~~~~~~~~~~~~~~~~~~~~')
+             print('Okey, maybe next time.')
+             print('~~~~~~~~~~~~~~~~~~~~~~')
+             ask = False
+             exit()
 
-question = input('Are you ready to play (yes or no): \n')
+
+
 
 
 def enter_quizz():
@@ -96,6 +111,4 @@ if question.lower() == 'yes':
 
 
 else:
-    print('~~~~~~~~~~~~~~~~~~~~~~')
-    print('Okey, maybe next time.')
-    print('~~~~~~~~~~~~~~~~~~~~~~')
+   
