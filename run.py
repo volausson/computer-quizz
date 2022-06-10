@@ -1,3 +1,6 @@
+"""
+Questions for Quizz
+"""
 
 questions = [
     {
@@ -8,6 +11,14 @@ questions = [
         ],
         'answer': 'b'
     },
+    {
+        'question': 'What does programming mean'
+    }
+    
+a) To give instructions to a computer
+b) Play difficult games on the computer
+right_answer:’a’
+
 
     {
         "question": "How many bits are there in a byte?",
@@ -52,6 +63,26 @@ questions = [
         'answer': 'a'
 
     }
+
+    What is an algorithm?
+a) A robot
+b) A series of instructions
+	right_answer:’b’
+
+
+4.	What sort of animal is Tux, the official mascot of the Linux operating system?
+Penguin
+
+1.	What was the name of the world's first programmer?
+Ada Lovelace
+
+
+2.	Who is considered the father of computers?
+Charles Babbage
+
+3.	Who is considered to be The Father of Artificial Intelligence?
+John McCarthy
+
 ]
 
 
@@ -59,8 +90,6 @@ def start_quizz():
     """
     Function defines the start of quizz
     """
-
-
     print('Hello, welcome to my Computer Quizz!\n')
     ask = True
     while ask:
@@ -68,17 +97,14 @@ def start_quizz():
         if question == 'yes':
             print('ok')
             enter_quizz()
-        if question =='':
+        if question == '':
             print('Hey, you need to type either yes or no to play!')
         if question == 'no':
-             print('~~~~~~~~~~~~~~~~~~~~~~')
-             print('Okey, maybe next time.')
-             print('~~~~~~~~~~~~~~~~~~~~~~')
-             ask = False
-             exit()
-
-
-
+            print('~~~~~~~~~~~~~~~~~~~~~~')
+            print('Okey, maybe next time.')
+            print('~~~~~~~~~~~~~~~~~~~~~~')
+            ask = False
+            exit()
 
 
 def enter_quizz():
@@ -87,28 +113,9 @@ def enter_quizz():
     """
 
 
-choice = input()
-options = input()
 TOTAL_QUESTIONS = 5
 SCORE = 0
-
-if question.lower() == 'yes':
-    question_str = input('Please enter your name: \n')
-    choice = input(f'Welcome,{question_str}! \n')
-    choice_str = input('Please choose level 1 to play.\n')
-    print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
-    print(f'You chose level {choice_str}, good luck with your game!')
-    print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
-
-    question = input('4. What does the abbreviation IT stand for?\n')
-    OPTIONS = "a) Indoor technology"
-    "b) Information technology"
-    if options.lower() == 'b':
-        SCORE += 1
-        print('well done, you got it right!')
-    else:
-        print('That was not the right answer, sorry.')
-
-
-else:
-   
+player_name = input('Please enter your name \n')
+('Otherwise I will just call you player): ').lower().strip()
+if player_name == '':
+    print(f'Hi, {player_name}, here comes your first question...')
