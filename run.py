@@ -1,12 +1,11 @@
 """
 Questions for Quizz
 """
-import random
 
 questions = [
 
     {
-        'question': 'What does programming mean',
+        'question': 'What does programming mean?',
         "options": [
           'a) To give instructions to a computer',
           'b) Play difficult games on the computer',
@@ -15,8 +14,7 @@ questions = [
         'correct_answer': 'a'
     },
     {
-        'question': 'In computing there are 8 bits to a byte, but what'
-        'are 4 bits called?',
+        'question': 'In computing there are 8 bits to a byte, but what are 4 bits called?',
         'options': [
            "a) A nibble",
            "b) A nipple",
@@ -54,8 +52,6 @@ questions = [
     },
 ]
 
-random.sample(questions, 5)
-
 
 def start_quizz():
     """
@@ -83,7 +79,7 @@ def enter_quizz():
     """
     Function to engage user and give responsive feedback.
     """
-    player_name = input('Please enter your name (otherwise I will just call you player):\n').lower().strip()
+    player_name = input('Please enter your name(otherwise I will just call you player:\n').lower().strip()
     if player_name == '':
         player_name = 'player'
     print(f'Hi, {player_name}, here comes your first question...')
@@ -94,9 +90,7 @@ def play_quizz():
     """
     The Quizz begins.
     """
-    tot_q = 5
     score = 0
-
     for question in questions:
         print(question['question'])
         question_options = question['options']
@@ -105,17 +99,21 @@ def play_quizz():
         player_choice = get_option_input()
         if player_choice == question['correct_answer']:
             score += 1
-            print('Well done, you got it right!')
+            print('Well done, you got it right!\nYour current score is:', score)
         else:
-            print('Wrong answer\n')
+            score -= 1
+            print('Sorry, wrong answer. You lost 1 point\nYour score is:', score)
     end_game()
 
 
 def get_option_input():
 
+    """
+    Function to define players input for options of answers.
+    """
+
     player_input = input('\nEnter either a/b/c:\n').lower()
     if player_input == "" or player_input not in ["a", "b", "c"]:
-        print('That was not the right answer\nPlease try again.')
         return get_option_input()
     return player_input
 
@@ -125,11 +123,9 @@ def end_game():
     This ends the game and provides user a thank you and some information
     """
     print("Thank you for playing my first python quiz game\n")
-    print('You scored', {score}, 'out of 5')
-    mark = (score/tot_q) * 100
+    print('You scored', score, 'out of 5')
 
-    print('Mark:', {mark}, + '%')
-    print('Game Over')
+    print('--------Game Over--------')
 
 
 start_quizz()
